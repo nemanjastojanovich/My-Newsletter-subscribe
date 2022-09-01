@@ -1,0 +1,13 @@
+const client = require("mailchimp-marketing");
+
+client.setConfig({
+  apiKey: "YOUR_API_KEY",
+  server: "YOUR_SERVER_PREFIX",
+});
+
+const run = async () => {
+  const response = await client.root.getRoot();
+  console.log(response);
+};
+
+run();
